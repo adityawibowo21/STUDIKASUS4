@@ -14,10 +14,10 @@ private :
 };
 
 int Operator :: iteratif_fibonaci(int x){
-  fibonaciA = 1;
+  fibonaciA = 0;
   fibonaciB = 1;
   cout<< fibonaciA<<" "<<fibonaciB<<" ";
-    for (int i=3; i<=x; i++){
+    for (int i=1; i<x; i++){
       fibonaci = fibonaciA + fibonaciB;
       fibonaciA = fibonaciB;
       fibonaciB = fibonaci;
@@ -41,12 +41,12 @@ int Operator:: rekursif_fibonaci(int x){
     int a,b;
     Operator run;
     cout<<"\n=====================================\n";
-    cout<<"\t\tBilangan Fibonaci ";
+    cout<<"\t\t\tDeret Fibonaci ";
     cout<<"\n=====================================\n";
-    cout<<"\nMasukkan batas bilangan fibonaci : ";
+    cout<<"\nMasukkan deret fibonaci ke : ";
     cin>>b;
-    cout<<"Iteratif : "<<run.iteratif_fibonaci(b)<<" "<<endl;
-    cout<<"Rekursif : ";
+    cout<<"\n* Iteratif : "<<run.iteratif_fibonaci(b)<<" "<<endl;
+    cout<<"\n* Rekursif : ";
     for(a=1; a<=b; a++){
       cout<<run.rekursif_fibonaci(a)<<" ";
     }
